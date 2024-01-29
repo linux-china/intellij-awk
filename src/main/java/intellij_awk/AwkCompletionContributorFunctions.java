@@ -29,7 +29,7 @@ public class AwkCompletionContributorFunctions extends AwkCompletionContributorB
       CompletionInitializationContext.DUMMY_IDENTIFIER_TRIMMED;
 
   private static final List<Set<Map.Entry<String, String>>> builtInFunctionSets =
-      List.of(AwkFunctions.builtInFunctions.entrySet(), AwkFunctions.gawkFunctions.entrySet());
+      List.of(AwkFunctions.builtInFunctions.entrySet(), AwkFunctions.gawkFunctions.entrySet(), AwkFunctions.frawkFunctions.entrySet(), AwkFunctions.zawkFunctions.entrySet());
 
   @Override
   public void beforeCompletion(@NotNull CompletionInitializationContext context) {

@@ -27,6 +27,8 @@ EOL=\R
 COMMENT=#.* | (\\\n)
 BUILTIN_FUNC_NAME=atan2|cos|sin|exp|log|sqrt|int|rand|srand|gsub|index|length|match|split|sprintf|sub|substr|tolower|toupper|close|fflush|system
 BUILTIN_FUNC_NAME_GAWK=asort|asorti|gensub|patsplit|strtonum|mktime|strftime|systime|and|compl|lshift|or|rshift|xor|isarray|typeof|bindtextdomain|dcgettext|dcngettext
+BUILTIN_FUNC_NAME_FRAWK=hex|int|join_fields|escape_csv|escape_tsv|join_csv|join_tsv
+BUILTIN_FUNC_NAME_ZAWK=fend|abs|floor|ceil|round|min|max|trim|truncate|escape|capitalize|seq|_join|local_ip|http_get|http_post|s3_get|s3_put|url|publish|whoami|encode|decode|digest|hmac|to_json|from_json|kv_get|kv_put|kv_delete|kv_clear|uuid|ulid
 NUMBER=( \d+ | (\d* \. \d+) | (\d+ \. \d*) ) ([eE] [+-]? \d+)?
 STRING=([\"]([^\"\n\\]|\\.|\\\n)*[\"])
 ERE="/"((\[\^?\/)|[^\\\n/]|(\\[^\n]))*"/"
@@ -134,6 +136,8 @@ WHITE_SPACE=[ \t]+
   {NEWLINE}                     { yybegin(YYINITIAL); return NEWLINE; }
   {BUILTIN_FUNC_NAME}      /\(? { yybegin(YYINITIAL); return BUILTIN_FUNC_NAME; }
   {BUILTIN_FUNC_NAME_GAWK} /\(? { yybegin(YYINITIAL); return BUILTIN_FUNC_NAME_GAWK; }
+  {BUILTIN_FUNC_NAME_FRAWK} /\(? { yybegin(YYINITIAL); return BUILTIN_FUNC_NAME_FRAWK; }
+  {BUILTIN_FUNC_NAME_ZAWK} /\(? { yybegin(YYINITIAL); return BUILTIN_FUNC_NAME_ZAWK; }
   {VAR_NAME}               /\(  { yybegin(YYINITIAL); return FUNC_NAME; }
   {SPECIAL_VAR_NAME}            { yybegin(DIV_POSSIBLE); return SPECIAL_VAR_NAME; }
   {SPECIAL_VAR_NAME_GAWK}       { yybegin(DIV_POSSIBLE); return SPECIAL_VAR_NAME_GAWK; }
