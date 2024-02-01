@@ -89,7 +89,7 @@
     BUILTIN_FUNC_NAME='regexp:atan2|cos|sin|exp|log|sqrt|int|rand|srand|gsub|index|length|match|split|sprintf|sub|substr|tolower|toupper|close|fflush|system'
     BUILTIN_FUNC_NAME_GAWK='regexp:asort|asorti|gensub|patsplit|strtonum|mktime|strftime|systime|and|compl|lshift|or|rshift|xor|isarray|typeof|bindtextdomain|dcgettext|dcngettext'
     BUILTIN_FUNC_NAME_FRAWK='regexp:hex|int|join_fields|escape_csv|escape_tsv|join_csv|join_tsv'
-    BUILTIN_FUNC_NAME_ZAWK='regexp:fend|abs|floor|ceil|round|min|max|trim|truncate|escape|capitalize|seq|_join|local_ip|http_get|http_post|s3_get|s3_put|url|publish|whoami|encode|decode|digest|hmac|to_json|from_json|kv_get|kv_put|kv_delete|kv_clear|uuid|ulid'
+    BUILTIN_FUNC_NAME_ZAWK='regexp:fend|abs|floor|ceil|round|min|max|trim|truncate|escape|capitalize|seq|_join|local_ip|http_get|http_post|s3_get|s3_put|url|publish|whoami|encode|decode|digest|hmac|to_json|from_json|kv_get|kv_put|kv_delete|kv_clear|uuid|ulid|snowfalke|datetime'
     NUMBER='regexp:(\d+|(\d*\.\d+)|(\d+\.\d*))([eE][+-]?\d+)?'
     STRING='regexp:("([^"\n\\]|\\.|\\\n)*")'
     ERE='regexp:/((\[\^?/)|[^\\\n/]|(\\[^\n]))*/'

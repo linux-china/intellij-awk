@@ -100,7 +100,9 @@ public final class AwkFunctions {
                     entry("kv_delete", "(namespace, key)"),
                     entry("kv_clear", "(namespace)"),
                     entry("uuid", "()"),
-                    entry("ulid", "()")
+                    entry("ulid", "()"),
+                    entry("snowflake", "()"),
+                    entry("datetime", "(datespec)")
             );
 
     private static final Map<String, ParametersHint> parameterHintsCache = new HashMap<>();
