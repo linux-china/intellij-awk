@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'intellij-awk'
-version '0.4.3'
+version '0.4.4'
 
 repositories {
     mavenCentral()
@@ -35,11 +35,12 @@ task parser(type: org.jetbrains.grammarkit.tasks.GenerateParser) {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version = '2021.1.3'
+    //version = '2021.1.3'
     plugins = ['com.intellij.java']
+    localPath = "/Users/linux_china/tools/idea-IC-211.7628.21"
 }
 patchPluginXml {
-    untilBuild.set('233.*') // https://www.jetbrains.com/idea/nextversion/
+    untilBuild.set('241.*') // https://www.jetbrains.com/idea/nextversion/
     // language=html
     pluginDescription.set("""
 <b>AWK Programming Language Support</b>
@@ -53,6 +54,13 @@ Find more info at <a href="https://github.com/xonixx/intellij-awk">https://githu
 """)
     // language=html
     changeNotes.set("""
+<p>
+    <b>v0.4.4</b>
+    <a href="https://github.com/linux-china/frawk/blob/master/info/stdlib.md">zawk stdlib</a>
+    <ul>
+        <li>Add zawk stdlib support</li>
+    </ul>
+</p>
 <p>
     <b>v0.4.3</b>
     <a href="https://github.com/xonixx/intellij-awk/milestone/25?closed=1">GitHub issues</a>
@@ -284,12 +292,12 @@ Find more info at <a href="https://github.com/xonixx/intellij-awk">https://githu
 sourceSets.main.java.srcDirs 'src/main/gen'
 
 task checkJavaVersion() {
-    if (!JavaVersion.current().isJava11()) {
-        String message = "ERROR: Java 11 required but " +
-                JavaVersion.current() +
-                " found. Change your JAVA_HOME environment variable.";
-        throw new IllegalStateException(message);
-    }
+    // if (!JavaVersion.current().isJava11()) {
+    //     String message = "ERROR: Java 11 required but " +
+    //             JavaVersion.current() +
+    //             " found. Change your JAVA_HOME environment variable.";
+    //     throw new IllegalStateException(message);
+    // }
 }
 
 compileJava.dependsOn checkJavaVersion
