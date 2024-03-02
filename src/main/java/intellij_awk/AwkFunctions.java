@@ -160,6 +160,9 @@ public final class AwkFunctions {
                     entry("os_family", "()"),
                     entry("pwd", "()"),
                     entry("user_home", "()"),
+                    // I/O
+                    entry("read_all", "(file_path)"),
+                    entry("writ_all", "(file_path, content)"),
                     // misc functions
                     entry("var_dump", "(variable)"),
                     entry("log_debug", "(msg)"),
