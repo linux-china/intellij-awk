@@ -97,6 +97,8 @@ public final class AwkFunctions {
                     entry("shlex", "(string)"),
                     entry("path", "(string)"),
                     entry("semver", "(string)"),
+                    entry("pairs", "(string[,pair_sep, kv_sep])"),
+                    entry("attributes", "(string)"),
                     // id generator functions
                     entry("uuid", "()"),
                     entry("ulid", "()"),
@@ -142,7 +144,7 @@ public final class AwkFunctions {
                     // network functions
                     entry("local_ip", "()"),
                     entry("http_get", "(url[,headers])"),
-                    entry("http_post", "(url, [headers, body])"),
+                    entry("http_post", "(url[,headers, body])"),
                     entry("s3_get", "(bucket, object_name)"),
                     entry("s3_put", "(bucket, object_name, body)"),
                     entry("publish", "(nats_url, message)"),
