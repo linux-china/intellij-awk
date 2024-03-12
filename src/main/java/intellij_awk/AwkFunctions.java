@@ -100,6 +100,7 @@ public final class AwkFunctions {
                     entry("pairs", "(string[,pair_sep, kv_sep])"),
                     entry("attributes", "(string)"),
                     entry("message", "(string)"),
+                    entry("func", "(string)"),
                     // id generator functions
                     entry("uuid", "()"),
                     entry("ulid", "()"),
