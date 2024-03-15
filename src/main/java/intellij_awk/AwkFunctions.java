@@ -59,6 +59,7 @@ public final class AwkFunctions {
     static final Map<String, String> zawkFunctions =
             Map.ofEntries(
                     // string functions
+                    entry("char_at", "(string, i)"),
                     entry("match", "(string, re)"),
                     entry("hex", "(string)"),
                     entry("join_fields", "(i, j [, sep])"),
@@ -138,6 +139,9 @@ public final class AwkFunctions {
                     entry("digest", "(algorithm, string)"),
                     entry("hmac", "(algorithm, key, string)"),
                     entry("jwt", "(algorithm, key, arr)"),
+                    entry("dejwt", "(algorithm, key, arr)"),
+                    entry("encrypt", "(mode, plain_text, key, iv)"),
+                    entry("decrypt", "(mode, encrypted_text, key, iv)"),
                     // KV functions
                     entry("kv_get", "(namespace, key)"),
                     entry("kv_put", "(namespace, key, value)"),
