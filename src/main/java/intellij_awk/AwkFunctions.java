@@ -166,6 +166,7 @@ public final class AwkFunctions {
                     // date time functions
                     entry("datetime", "(datespec)"),
                     // os functions
+                    entry("version", "()"),
                     entry("whoami", "()"),
                     entry("os", "()"),
                     entry("arch", "()"),
