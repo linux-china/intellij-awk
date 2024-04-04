@@ -86,6 +86,8 @@ public final class AwkFunctions {
                     entry("default_if_empty", "(string, default)"),
                     entry("append_if_missing", "(string, suffix)"),
                     entry("prepend_if_missing", "(string, prefix)"),
+                    entry("remove_if_begin", "(string, prefix)"),
+                    entry("remove_if_end", "(string, suffix)"),
                     entry("quote", "(string)"),
                     entry("double_quote", "(string)"),
                     // text escape functions
