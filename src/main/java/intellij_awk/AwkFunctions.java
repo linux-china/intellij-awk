@@ -60,6 +60,7 @@ public final class AwkFunctions {
             Map.ofEntries(
                     // string functions
                     entry("char_at", "(string, i)"),
+                    entry("last_part", "(string[, sep])"),
                     entry("match", "(string, re)"),
                     entry("hex", "(string)"),
                     entry("join_fields", "(i, j [, sep])"),
@@ -121,6 +122,8 @@ public final class AwkFunctions {
                     entry("_sum", "(arr)"),
                     entry("_mean", "(arr)"),
                     entry("_join", "(arr[, sep])"),
+                    entry("bf_insert", "(item[, group])"),
+                    entry("bf_contains", "(item[, group])"),
                     // math functions
                     entry("abs", "(number)"),
                     entry("floor", "(number)"),
