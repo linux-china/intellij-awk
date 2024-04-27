@@ -61,6 +61,8 @@ public final class AwkFunctions {
                     // string functions
                     entry("char_at", "(string, i)"),
                     entry("last_part", "(string[, sep])"),
+                    entry("parse", "(string[, template])"),
+                    entry("rparse", "(string[, regex])"),
                     entry("match", "(string, re)"),
                     entry("hex", "(string)"),
                     entry("join_fields", "(i, j [, sep])"),
