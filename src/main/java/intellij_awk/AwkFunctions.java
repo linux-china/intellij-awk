@@ -172,6 +172,7 @@ public final class AwkFunctions {
                     entry("mysql_execute", "(url, sql)"),
                     // date time functions
                     entry("datetime", "(datespec)"),
+                    entry("duration", "(expr)"),
                     // os functions
                     entry("version", "()"),
                     entry("whoami", "()"),
