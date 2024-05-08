@@ -184,6 +184,9 @@ public final class AwkFunctions {
                     // I/O
                     entry("read_all", "(file_path)"),
                     entry("writ_all", "(file_path, content)"),
+                    // color
+                    entry("hex2rgb", "(hex)"),
+                    entry("rgb2hex", "(red, green, blue)"),
                     // misc functions
                     entry("var_dump", "(variable)"),
                     entry("log_debug", "(msg)"),
