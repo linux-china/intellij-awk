@@ -126,6 +126,7 @@ public final class AwkFunctions {
                     entry("_join", "(arr[, sep])"),
                     entry("bf_insert", "(item[, group])"),
                     entry("bf_contains", "(item[, group])"),
+                    entry("bf_icontains", "(item[, group])"),
                     // math functions
                     entry("abs", "(number)"),
                     entry("floor", "(number)"),
