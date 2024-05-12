@@ -46,7 +46,7 @@ patchPluginXml {
 <b>AWK Programming Language Support</b>
 <br/><br/>
 This plugin adds to IntelliJ IDEA the native support for <a href='https://en.wikipedia.org/wiki/AWK'>AWK</a> programming language.
-Once installed, you'll be able to have syntax highlighted in your *.awk files as well as other usual code editing functionalities like 
+Once installed, you'll be able to have syntax highlighted in your *.awk files as well as other usual code editing functionalities like
 variables/functions renaming, code completion, go to declaration, find usages, auto-formatting and more.
 Find more info at <a href="https://github.com/xonixx/intellij-awk">https://github.com/xonixx/intellij-awk</a>.
 <br/><br/>
@@ -56,9 +56,10 @@ Find more info at <a href="https://github.com/xonixx/intellij-awk">https://githu
     changeNotes.set("""
 <p>
     <b>v0.4.4</b>
-    <a href="https://github.com/linux-china/frawk/blob/master/info/stdlib.md">zawk stdlib</a>
+    <a href="https://github.com/xonixx/intellij-awk/milestone/26?closed=1">GitHub issues</a>
     <ul>
-        <li>Add zawk stdlib support</li>
+        <li>Improvements to auto-completion</li>
+        <li>Improve unused function detection (GAWK)</li>
     </ul>
 </p>
 <p>
