@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'intellij-awk'
-version '0.4.4'
+version '0.4.5'
 
 repositories {
     mavenCentral()
@@ -54,6 +54,13 @@ Find more info at <a href="https://github.com/xonixx/intellij-awk">https://githu
 """)
     // language=html
     changeNotes.set("""
+<p>
+    <b>v0.4.5</b>
+    <a href="https://github.com/linux-china/frawk/blob/master/info/stdlib.md">zawk stdlb</a>
+    <ul>
+        <li>Add zawk stdlib support</li>
+    </ul>
+</p>
 <p>
     <b>v0.4.4</b>
     <a href="https://github.com/xonixx/intellij-awk/milestone/26?closed=1">GitHub issues</a>
