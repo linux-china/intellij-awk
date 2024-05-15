@@ -189,7 +189,7 @@ public final class AwkFunctions {
                     entry("hex2rgb", "(hex)"),
                     entry("rgb2hex", "(red, green, blue)"),
                     // misc functions
-                    entry("fake", "(name[,locale])"),
+                    entry("fake", "(data[,locale])"),
                     entry("var_dump", "(variable)"),
                     entry("log_debug", "(msg)"),
                     entry("log_info", "(msg)"),
