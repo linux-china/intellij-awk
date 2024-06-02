@@ -152,8 +152,8 @@ public final class AwkFunctions {
                     entry("hmac", "(algorithm, key, string)"),
                     entry("jwt", "(algorithm, key, arr)"),
                     entry("dejwt", "(algorithm, key, arr)"),
-                    entry("encrypt", "(mode, plain_text, key, iv)"),
-                    entry("decrypt", "(mode, encrypted_text, key, iv)"),
+                    entry("encrypt", "(mode, plain_text, key)"),
+                    entry("decrypt", "(mode, encrypted_text, key)"),
                     // KV functions
                     entry("kv_get", "(namespace, key)"),
                     entry("kv_put", "(namespace, key, value)"),
