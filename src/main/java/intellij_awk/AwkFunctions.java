@@ -41,6 +41,7 @@ public final class AwkFunctions {
                     entry("patsplit", "(string, array [, fieldpat [, seps ] ])"),
                     entry("strtonum", "(string)"),
                     entry("mkbool", "(string)"),
+                    entry("mkpass", "(num)"),
                     entry("mktime", "(datespec [, utc-flag ])"),
                     entry("strftime", "([format [, timestamp [, utc-flag] ] ])"),
                     entry("systime", "()"),
