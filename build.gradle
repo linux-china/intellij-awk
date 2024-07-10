@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'intellij-awk'
-version '0.4.5'
+version '0.4.6'
 
 repositories {
     mavenCentral()
@@ -35,18 +35,19 @@ task parser(type: org.jetbrains.grammarkit.tasks.GenerateParser) {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    //version = '2021.1.3'
+    downloadSources = true // https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html#ide-configuration
+    version = '2021.1.3'
     plugins = ['com.intellij.java']
-    localPath = "/Users/linux_china/tools/ideaIC-2021.1.3"
 }
 patchPluginXml {
+    // let's set untilBuild to very high to make it compatible by default with all future versions
     untilBuild.set('999.*') // https://www.jetbrains.com/idea/nextversion/
     // language=html
     pluginDescription.set("""
 <b>AWK Programming Language Support</b>
 <br/><br/>
 This plugin adds to IntelliJ IDEA the native support for <a href='https://en.wikipedia.org/wiki/AWK'>AWK</a> programming language.
-Once installed, you'll be able to have syntax highlighted in your *.awk files as well as other usual code editing functionalities like
+Once installed, you'll be able to have syntax highlighted in your *.awk files as well as other usual code editing functionalities like 
 variables/functions renaming, code completion, go to declaration, find usages, auto-formatting and more.
 Find more info at <a href="https://github.com/xonixx/intellij-awk">https://github.com/xonixx/intellij-awk</a>.
 <br/><br/>
@@ -54,6 +55,13 @@ Find more info at <a href="https://github.com/xonixx/intellij-awk">https://githu
 """)
     // language=html
     changeNotes.set("""
+<p>
+    <b>v0.4.6</b>
+    <a href="https://github.com/linux-china/frawk/blob/master/info/stdlib.md">zawk stdlb</a>
+    <ul>
+        <li>Add zawk stdlib support</li>
+    </ul>
+</p>
 <p>
     <b>v0.4.5</b>
     <a href="https://github.com/linux-china/frawk/blob/master/info/stdlib.md">zawk stdlb</a>
