@@ -170,6 +170,8 @@ public final class AwkFunctions {
                     // database functions
                     entry("sqlite_query", "(db_path, sql)"),
                     entry("sqlite_execute", "(db_path, sql)"),
+                    entry("libsql_query", "(db_path, sql)"),
+                    entry("libsql_execute", "(db_path, sql)"),
                     entry("mysql_query", "(url, sql)"),
                     entry("mysql_execute", "(url, sql)"),
                     // date time functions
