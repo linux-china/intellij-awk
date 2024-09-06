@@ -115,6 +115,7 @@ public final class AwkFunctions {
                     // id generator functions
                     entry("uuid", "()"),
                     entry("ulid", "()"),
+                    entry("tsid", "()"),
                     entry("snowflake", "()"),
                     // array functions
                     entry("seq", "(i [,step],j)"),
