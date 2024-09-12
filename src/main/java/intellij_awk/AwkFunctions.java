@@ -85,6 +85,7 @@ public final class AwkFunctions {
                     entry("pad_start", "(string, len, placeholder)"),
                     entry("pad_end", "(string, len, placeholder)"),
                     entry("strcmp", "(string, string)"),
+                    entry("lines", "(string)"),
                     entry("words", "(string)"),
                     entry("repeat", "(string, n)"),
                     entry("default_if_empty", "(string, default)"),
