@@ -146,6 +146,12 @@ public final class AwkFunctions {
                     //json functions
                     entry("to_csv", "(arr)"),
                     entry("from_csv", "(string)"),
+                    entry("json_value", "(json_txt, json_path)"),
+                    entry("json_query", "(json_txt, json_path)"),
+                    entry("xml_value", "(xml_txt, xpath)"),
+                    entry("xml_query", "(xml_txt, xpath)"),
+                    entry("html_value", "(html_text, selector)"),
+                    entry("html_query", "(html_text, selector)"),
                     // encoding
                     entry("encode", "(format, string)"),
                     entry("decode", "(format, string)"),
