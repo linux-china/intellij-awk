@@ -78,6 +78,8 @@ public final class AwkFunctions {
                     entry("kebab_case", "(string)"),
                     entry("snake_case", "(string)"),
                     entry("title_case", "(string)"),
+                    entry("pascal_case", "(string)"),
+                    entry("figlet", "(string)"),
                     entry("isint", "(string)"),
                     entry("isnum", "(string)"),
                     entry("mask", "(string, mask)"),
