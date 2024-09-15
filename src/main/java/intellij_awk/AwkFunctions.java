@@ -184,6 +184,8 @@ public final class AwkFunctions {
                     entry("libsql_execute", "(db_path, sql)"),
                     entry("mysql_query", "(url, sql)"),
                     entry("mysql_execute", "(url, sql)"),
+                    entry("pg_query", "(url, sql)"),
+                    entry("pg_execute", "(url, sql)"),
                     // date time functions
                     entry("datetime", "(datespec)"),
                     entry("duration", "(expr)"),
@@ -197,6 +199,7 @@ public final class AwkFunctions {
                     entry("user_home", "()"),
                     // I/O
                     entry("read_all", "(file_path)"),
+                    entry("read_config", "(file_path)"),
                     entry("writ_all", "(file_path, content)"),
                     // color
                     entry("hex2rgb", "(hex)"),
