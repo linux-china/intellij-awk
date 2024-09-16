@@ -174,6 +174,7 @@ public final class AwkFunctions {
                     entry("local_ip", "()"),
                     entry("http_get", "(url[,headers])"),
                     entry("http_post", "(url[,headers, body])"),
+                    entry("send_mail", "(from, to, subject, body)"),
                     entry("s3_get", "(bucket, object_name)"),
                     entry("s3_put", "(bucket, object_name, body)"),
                     entry("publish", "(nats_url, message)"),
