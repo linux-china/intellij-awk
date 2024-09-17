@@ -31,7 +31,8 @@ public final class AwkFunctions {
                     entry("toupper", "(string)"),
                     entry("close", "(filename [, how])"),
                     entry("fflush", "([filename])"),
-                    entry("system", "(command)"));
+                    entry("system", "(command)"),
+                    entry("system2", "(command)"));
 
     static final Map<String, String> gawkFunctions =
             Map.ofEntries(
