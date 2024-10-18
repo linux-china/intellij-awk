@@ -141,6 +141,7 @@ public final class AwkFunctions {
                     entry("min", "(i, j[, k])"),
                     entry("max", "(i, j[, k])"),
                     entry("fend", "(expression)"),
+                    entry("eval", "(expression, context)"),
                     entry("mkbool", "(string)"),
                     entry("int", "(string)"),
                     entry("float", "(string)"),
