@@ -223,7 +223,25 @@ public class AwkUtil {
     return element instanceof PsiComment && element.textMatches("\\\n");
   }
 
-  /** "\"value\"" -> "value" */
+  /**
+   * <pre><code>
+   * function fname(a, b,   l1,l2)
+   *                     ^^^--------this whitespace
+   * </code></pre>
+   *
+   * @return true when this element represents the delimiter that plays the role of delimiting the
+   *     function's locals
+   */
+  public static boolean isLocalsMarkingDelimiter(PsiElement psiElement) {
+    if (psiElement instanceof PsiWhiteSpace || psiElement instanceof PsiComment) {
+      return psiElement instanceof PsiWhiteSpace && psiElement.getTextLength() >= 3
+          || isLineContinuation(psiElement);
+    }
+
+    return false;
+  }
+
+  /** <code>"\"value\""</code> -> <code>"value"</code> */
   public static String stringValue(String str) {
     return str == null || str.length() < 2 ? null : str.substring(1, str.length() - 1);
   }
@@ -245,22 +263,5 @@ public class AwkUtil {
     }
     ASTNode node = psiElement.getNode();
     return node != null && elementType.equals(node.getElementType());
-  }
-
-  @NotNull
-  public static String getDocStringFromCommentBefore(PsiElement psiElement) {
-    if (psiElement == null) {
-      return "";
-    }
-    StringBuilder sb = new StringBuilder();
-    PsiElement e = psiElement;
-    while ((e = e.getPrevSibling()) instanceof PsiComment || isType(e, AwkTypes.NEWLINE)) {
-      String text = e.getText();
-      if (text.startsWith("#")) {
-        text = text.substring(1).stripLeading();
-      }
-      sb.insert(0, text);
-    }
-    return sb.toString();
   }
 }
